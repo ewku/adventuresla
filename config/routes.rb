@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :adventures
+  get 'bucketlist/:id' =>'adventures#show'
+
+
+  root 'adventures#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
